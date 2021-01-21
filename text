@@ -1,6 +1,6 @@
 
 ** 텍스트 넘어가면 ... 으로
-{text-overflow:ellipsis;white-space:nowrap;overflow:hidden; display:block;padding-right:15px;}
+{text-overflow:ellipsis;white-space:nowrap;overflow:hidden; display:block;}
 
 2줄이상
 {display: -webkit-box; -webkit-line-clamp: 2; text-overflow: ellipsis; overflow: hidden; -webkit-box-orient: vertical;}
