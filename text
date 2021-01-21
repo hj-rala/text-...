@@ -1,0 +1,36 @@
+
+** 텍스트 넘어가면 ... 으로
+{text-overflow:ellipsis;white-space:nowrap;overflow:hidden; display:block;padding-right:15px;}
+
+2줄이상
+{display: -webkit-box; -webkit-line-clamp: 2; text-overflow: ellipsis; overflow: hidden; -webkit-box-orient: vertical;}
+
+
+
+normal : 기본값으로 글자 줄이 자동으로 바뀐다. 콘텐츠가 요소의 너비를 초과할 경우 다음 줄로 바뀐다.
+nowrap : 줄 바꿈이 실행되지 않는다. 콘텐츠가 다음 줄로 바뀌지 않는다.
+pre : 줄 바꿈과 기타 공백이 유지된다. 이 가능한 값은 !DOCTYPE 선언에서 표준 준수 모드를 지정할 경우에 지원된다. !DOCTYPE 선언에서 표준 준수 모드를 지정하지 않으면 이 값을 검색할 수는 있지만 렌더링에 양향을 주지 않으며 normal 값처럼 동작한다.
+pre-line : 줄 바꿈 시퀀스가 유지된다.
+pre-wrap : 줄 바꿈 시퀀스가 축소된다.
+inherit : 부모 요소로부터 값을 상속 받는다.
+text-align: justify; <<<글자 줄바꿈 간격 맞춤
+
+white-space 속성값
+normal 기본값, 공백을 여러개 넣어도 공백 1개만 표시, 글이 길어지면 텍스트가 자동 줄바꿈 됨(wrap)
+nowrap 공백을 여러개 넣어도 1개만 표시, 텍스트가 길어도 줄바꿈 되지 않고 같은 줄에 계속 표시
+pre 공백을 코드에 있는 그대로 표시함. <pre>태그처럼 행동함. 코드에 줄바꿈이 없다면 줄바꿈이 되지 않음
+pre-wrap 공백을 코드에 있는 그대로 표시함. 코드에 줄바꿈이 없어도 자동 줄바꿈이 됨.
+pre-line  공백을 여러개 넣어도 1개만 표시. 코드에 줄바꿈이 없어도 자동 줄바꿈이 되며,
+코드에 줄바꿈이 있을 때도 그대로 표시
+
+*****list-style-type
+https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type
+
+list 목록 앞부분의 색을 지정하는 법 
+ul li{list-style-type: none;} 
+ul li:before{content: counter(item, disc) " ";color: red;}
+  
+목록 순서 번호를 적색으로 표시 하고 싶다면,
+ol li {list-style-type: none;counter-increment: item;}
+ol li:before{content: counter(item) ". ";color: red;}
+
